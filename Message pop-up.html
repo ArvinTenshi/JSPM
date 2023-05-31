@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Project WEB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       
+h1{
+	color: yellow;
+	text-shadow: white 3px 3px 3px;
+	padding:10px;
+	font-size:90px;
+}
+h2{
+	color: yellow;
+	text-shadow: red 2px 2px 2px;
+	font-size:40px;
+}
+h3{
+	color: yellow;
+	text-shadow: red 2px 2px 2px;
+    font-size:40px;
+}
+
+h4{
+ color: yellow;
+ text-shadow: red 2px 2px 2px;
+ font-size:40px;
+}
+h5{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: red;
+    font-size: 100px;
+    font-family:cursive;
+    text-shadow:white 5px 3px 2px; 
+    text-align: center;
+}
+h6{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: lime;
+    font-size:40px;
+    font-family:cursive;
+    text-shadow:deeppink 4px 2px 2px; 
+    text-align: center;
+}
+h7{
+    color:darkcyan;
+    font-size: 35px;
+    font-family:cursive;
+    text-align: center;
+    background-color:black ;
+    width:100px;
+}
+body{
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position:center;
+}
+button{
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
+	background-color:cyan;
+	border-color:#ff00ff;
+	border-width: 2px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: #00ff33;
+	box-shadow: 4px 7px 15px red;
+	transform: scale(1.5);
+
+
+}
+.container0{
+	background-image: url(moba.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50px;
+	height: 200px;
+	width: 500px;
+}
+.container00{
+	background-image: url(ml.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50px;
+	height: 200px;
+	width: 500px;
+}
+P{
+	color: white;
+	font-size: 20px;
+	background-color:black;
+	width:300px;
+	border-radius: 50px;
+
+}
+.container000{
+	background-image: url(moba.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50px;
+	height: 200px;
+	width: 500px;
+
+}
+
+</style>
+<body>
+    <div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                <li class="array"><a href="multidimensional.html">Array</a></li>
+                <li class="about"><a href="about.html">About Creator</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div id="pop-up"> 
+        <h5>Message Pop-up</h5>
+        <div class="Pop-up">
+    <center>
+<h1>ML Tournament</h1>
+<h6><br>JavaScript provides built-in global functions to display popup message boxes for different purposes.</br>
+<br>alert(message): Display a popup box with the specified message with the OK button.</br>
+<br>prompt(message, defaultValue): Display a popup box to take the user's input with the OK and Cancel buttons.</br>
+<br>confirm(message): Display a popup box with the specified message with OK and Cancel buttons.</br>
+</h6>
+<h7>Below in an example of a alert, prompt & confirm message Popup.</h7>
+</center>
+<br></br><br></br><br></br>
+   <center>
+    <div class="container0">
+    <h2>Question?</h2>
+    <button onclick="displayInfo()">Click to View</button>
+    <script>
+        function displayInfo(){
+            alert("Are you sure you want to enter the Tournament?");
+
+            alert("Please proceed to the next chapter of your life"); 
+        }
+    </script>
+    </div>
+    <div class="container00">
+    <h3>Enter your ML Id</h3>
+    <button onclick="myinput()">Click to enter your ML ID</button>
+    <p id="msg"></p>
+   
+    <script>
+        function myinput(){
+            var MLID = prompt("Enter Your ML ID:");
+   
+            if (MLID == null || MLID == "") {
+                document.getElementById("msg").innerHTML = "You did not enter anything. Please enter your ML ID again";
+            }
+            else
+            {
+                document.getElementById("msg").innerHTML = "Your ML id is: " + MLID;
+            }
+        }
+    </script>
+    </div>
+    <div class="container000">
+    <h4>Join Now!</h4>
+    <button onclick="save1()">Click to Join</button>
+    <p id="msg1"></p>
+   
+    <script>
+        function save1(){    
+          var userPreference;
+
+            if (confirm("Do you really want to join the Tournament?") == true) {
+                userPreference = "You have successfully joined!";
+            } else {
+                userPreference = "Join Cancelled!";
+            }
+
+            document.getElementById("msg1").innerHTML = userPreference;
+        }
+    </script>
+</div>
+</center>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

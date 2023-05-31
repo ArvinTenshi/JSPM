@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Constant</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   h1{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: gold;
+    font-size: 100px;
+    font-family:cursive;
+    text-shadow:lime 5px 3px 2px; 
+    text-align: center;
+}
+body{
+	background-image:url(cons.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position:center;
+}
+button{
+	padding: 10px;
+	font-size: 16px;
+	background-color:violet;
+	border-color:lime;
+	border-width: 3.5px;
+	border-radius: 10px;
+	cursor: pointer;
+	width:150px;
+	height: 90px;
+	color:black;    
+}
+button:hover{
+	background-color:yellow;
+	box-shadow: 4px 7px 15px cyan;
+	transform: scale(1.5);
+}
+.center {
+  margin: 0;
+  position:absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.Constant{
+    color:white; 
+    text-shadow:aqua 4px 2px 7px; 
+    text-align: center;
+    font-size:40px;
+    font-family:sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+ </style>
+    <body>
+ 	<div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                 <li class="array"><a href="multidimensional.html">Array</a></li>
+                 <li class="about"><a href="about.html">About Creator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="constant"> 
+        <h1>Constant</h1>
+        <div class="Constant">
+        	<div>
+        	<p>After Entering the Numbers</p>
+        	<p>to view the result please press F12 then go to Console</p>
+        	</div>
+        	<div class="center">
+        <button onclick="sample_constant()">Click Here</button>
+  </div>
+<script>
+	function sample_constant(){
+		const n1 =parseInt(prompt('Enter first number:'));
+const n2 =parseInt(prompt('Enter second number:'));
+for(let i=1;i<=n2; i++){
+	const result=i * n1;
+	console.log(`${n1} * ${i} = ${result}`);
+}  
+}
+</script>
+   </body>
+ <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

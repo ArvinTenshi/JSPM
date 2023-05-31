@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Array</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image: url(g.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    color: #000000;
+    font-size: 16px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 2.5rem;
+}
+
+.inputs{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+.input-value input{
+    font-size: 1.5rem;
+    height: 45px;
+    border-radius: 7px;
+    border: none; 
+    color:black;  
+}
+
+.lists{
+    display: flex;
+    justify-content: center;
+    color:white;
+    background-color:black;
+    border-radius:10px;
+}
+
+li{
+    font-size: 1.0rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1.9rem;
+}
+button{
+    padding: 8px;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: none;
+    background-color: gold;
+    cursor: pointer;  
+}
+button:hover{
+    background-color: #00ff33;
+    box-shadow: 3px 7px 5px cyan;
+    transform: scale(1.5);
+}
+h1{
+    color:cyan;
+    font-size:60px;
+    font-family:cursive;
+    text-align:center;
+    width:50%;
+    text-shadow:white 3px 2px 2px;
+}
+h2{
+    color:white;
+    font-size:60px;
+    font-family:cursive;
+    text-align:center;
+    width:50%;
+    text-shadow:lime 3px 2px 2px;
+}
+p{
+    line-height: 2.5;
+    font-size: 40px;
+    color:red; 
+    text-shadow:yellow 2px 3px 2px; 
+    text-align: center;
+    font-family:sans-serif;
+}
+
+</style>
+
+<body>
+    <div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+               <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                <li class="array"><a href="multidimensional.html">Array</a></li>
+                <li class="about"><a href="about.html">About Creator</a></li>
+            </ul>
+        </div>
+    </div>
+    <center><h1>What is Arrays?</h1><br>
+        <p>-An array is a collection of elements of the same type placed in contiguous memory locations that can be individually referenced by using an index to a unique identifier. Five values of type int can be declared as an array without having to declare five different variables (each with its own identifier).</p><br>
+        <h1>The 4 types of Arrays</h1>
+        <p>
+        1.PUSH - The push() method adds the specified elements to the end of an array and returns the new length of the array.
+        <br> 2.SHIFT - The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+        <br> 3.POP - The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+        <br> 4.UNSHIFT - The unshift() method adds the specified elements to the beginning of an array and returns the new length of the array.</p>
+        <h2>Below is an example of a multidimensional Array</h2>
+        </center>
+
+    <div class="main">
+    <div class="inputs">
+        <div class="input-value">
+            <input type="text" placeholder="Enter name:" id="name" >
+            <input type="number" placeholder="Enter age:" id="age">
+        </div>
+        
+        <button onclick="addList()">Add</button>
+
+    </div>
+    
+    <div class="lists">
+
+    </div>
+
+    <div class="buttons">
+        <button onclick="shiftBtn()">Shift</button>
+        <button onclick="unshiftBtn()">Unshift</button>
+        <button onclick="popBtn()">Pop</button>
+        <button onclick="pushBtn()">Push</button>
+    </div>
+</div>
+<script>
+    const list= [
+]
+
+function displayList(){
+    const listContainer= document.querySelector('.lists');
+    listContainer.innerHTML= '';
+
+    const olEl= document.createElement('ol');
+    list.forEach(item =>{
+        const liEl= document.createElement('li');
+        liEl.innerHTML= item;
+        olEl.appendChild(liEl);
+    })
+    listContainer.appendChild(olEl);
+}
+
+displayList();
+
+
+function addList(){
+
+    const name= document.getElementById('name').value;
+    const age= document.getElementById('age').value;
+
+    list.push([name, age]);
+    displayList();
+}
+function shiftBtn(){
+    list.shift();
+    displayList();
+}
+
+function unshiftBtn(){
+    const name= prompt("Enter name");
+    const age= prompt("Enter age");
+    list.unshift([name, age]);
+    displayList();
+}
+
+function popBtn(){
+    list.pop();
+    displayList();
+}
+
+function pushBtn(){
+    const name= prompt("Enter name");
+    const age= prompt("Enter age");
+    list.push([name, age]);
+    displayList();
+}
+
+</script>
+        <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

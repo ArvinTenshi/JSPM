@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>js text formating</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+h4{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: yellow;
+    font-size: 100px;
+    font-family:cursive;
+    text-shadow:springgreen 5px 3px 2px; 
+    text-align: center;
+}
+h3{
+	color:black;
+	font-size: 35px;
+    font-family:cursive;
+    text-shadow:white 3px 3px 2px; 
+    text-align: center;
+
+}
+h2{
+	color:orangered;
+	font-size: 35px;
+    font-family:cursive;
+    text-align: center;
+    background-color:black ;
+    width:50%;
+
+}
+p{
+    line-height: 2.5;
+}
+
+ body{
+	background-image: url(valentines.gif);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+	color:white;
+}
+
+h1{
+	text-shadow: 4px 7px 15px black;
+	font-size: 50px;
+	text-align: center;
+	color: white;
+}
+
+.button{
+	margin-top: 20px;
+}
+
+button{
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
+	background-color: turquoise;
+	border-color:#ff00ff;
+	border-width: 3px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: #00ff33;
+	box-shadow: 4px 7px 15px red;
+	transform: scale(1.5);
+
+}
+    </style>
+</head>
+<center>
+
+<body id="format_body">
+	 <div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                <li class="array"><a href="multidimensional.html">Array</a></li>
+                <li class="about"><a href="about.html">About Creator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="format"> 
+        <h4>Text Formating</h4>
+        <div class="Format">
+        	<br><h3>Text formatting is a feature in word processors used to change a text's appearance, such as its size and color. Most apps display these formatting options in the top toolbar and follow similar steps.</h3></br>
+      <br><br><h2>Below is an example of a simple text formating.</h2></br></br>
+    <br>    	
+	<p id="format_text">"I Love You Baby from Now and Forever Till our Last Breath"</p>
+	<button onclick="document.getElementById('format_text').style.color='#FFD700'">
+	Text Color
+	</button>
+	<button onclick="document.getElementById('format_text').style.backgroundColor='black'">
+	Background Color
+	</button>
+	<button onclick="document.getElementById('format_text').style.fontSize='60px'">
+	Adjust Size
+	</button>
+	<button onclick="document.getElementById('format_text').style.fontWeight='bold'">
+	Bold
+	</button>
+	<button onclick="document.getElementById('format_text').style.textShadow='15px 5px 10px #00ffff'">
+	Text Shadow
+	</button>
+	<button onclick="document.getElementById('format_text').style.fontFamily='cursive'">
+	Text Style
+	</button>	
+	<button onclick="document.getElementById('format_text').style.border='6px solid #f5f5f5'">
+	Border
+	</button>
+	<button onclick="document.getElementById('format_text').style.borderRadius='100px'">
+	Border Radius
+	</button>
+	
+	<button onclick="document.getElementById('format_text').style.borderColor='#ff00cc'">
+	Border Color
+	</button>
+	<button onclick="document.getElementById('format_text').innerHTML='Will You Be My Girlfriend?'">
+	Surprise
+	</button>
+</br>
+	</center>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

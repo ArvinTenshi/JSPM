@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arithmetic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+ 	h1{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: hotpink;
+    font-size: 100px;
+    font-family:cursive;
+    text-shadow:#00FFFF 5px 3px 2px; 
+    text-align: center;
+}
+h2{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: lime;
+    font-size:40px;
+    font-family:cursive;
+    text-shadow:red 4px 2px 2px; 
+    text-align: center;
+}
+body{
+	background-image: url(ari.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+button{
+	padding: 10px;
+	font-size: 16px;
+	background-color:black;
+	border-color:red;
+	border-width: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+	width:150px;
+	height: 90px;
+	color:white;    
+}
+h3{
+    color:gold;
+    font-size: 35px;
+    font-family:cursive;
+    text-align: center;
+    background-color:black;
+    width:30%;
+    text-shadow:darkviolet 3px 2px 2px;
+}
+button:hover{
+	background-color: orange;
+	box-shadow: 4px 7px 15px lime;
+	transform: scale(1.5);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+ </style>
+    <body>
+ 	<div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+               <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                <li class="array"><a href="multidimensional.html">Array</a></li>
+                <li class="about"><a href="about.html">About Creator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="arithmetic"> 
+        <h1>Arithmetic</h1>
+        <h2>Arithmetic coding algorithm encodes an entire file as a sequence of symbols into a single decimal number. The input symbols are processed one at each iteration. The initial interval [0, 1) (or [0, 1]) is successively divided into subintervals on each iteration according to the probability distribution.</h2>
+        <center><h3>Click the button below!</h3></center>
+        <div class="Arithmetic">
+        	<div class="center">
+        <button onclick="sample_arithmetic()">Click Here</button>
+  </div>
+<script>
+	function sample_arithmetic(){
+let CCNA = +prompt("Enter 1st grade: ", );
+let Web = +prompt("Enter 2nd grade: ", );
+let STS = +prompt("Enter 3rd grade: ", );
+let Ethics = +prompt("Enter 4th grade: ", );
+let PATHFIT = +prompt("Enter 5th grade: ", );
+let sum = CCNA + Web + STS + Ethics +PATHFIT;
+let GPA = sum/5
+
+	if(GPA >= 95){
+		alert(CCNA+"+" +Web +"+" +STS+"+"+Ethics+"+"+PATHFIT+"="+""+sum+ "\n" +sum+"/5"+ "="+GPA+ "\n" +GPA+" Excellent");
+	}else if(GPA >= 90){
+		alert(CCNA+"+" +Web +"+" +STS+"+"+Ethics+"+"+PATHFIT+"="+""+sum+ "\n" +sum+"/5"+ "="+GPA+ "\n" +GPA+" Very Satisfactory");
+	}else if(GPA >= 85){
+		alert(CCNA+"+" +Web +"+" +STS+"+"+Ethics+"+"+PATHFIT+"="+""+sum+ "\n" +sum+"/5"+ "="+GPA+ "\n" +GPA+" Satisfactory");
+	}else if(GPA >= 80){
+		alert(CCNA+"+" +Web +"+" +STS+"+"+Ethics+"+"+PATHFIT+"="+""+sum+ "\n" +sum+"/5"+ "="+GPA+ "\n" +GPA+" Fair");
+	}else{
+		alert(CCNA+"+" +Web +"+" +STS+"+"+Ethics+"+"+PATHFIT+"="+""+sum+ "\n" +sum+"/5"+ "="+GPA+ "\n" +GPA+" Poor");
+	}
+}
+        	</script>
+	      </body>
+	 <script type="text/javascript" src="script.js"></script>
+	</body>
+	</html>

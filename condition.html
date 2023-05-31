@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Condition</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ 	h1{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: orange;
+    font-size: 100px;
+    font-family:cursive;
+    text-shadow:#00FFFF 5px 3px 2px; 
+    text-align: center;
+}
+h2{
+    text-align: center;
+    justify-content: center;
+    padding:50px;
+    color: lime;
+    font-size: 50px;
+    font-family:cursive;
+    text-shadow:red 5px 3px 2px; 
+    text-align: center;
+}
+h3{
+    color:cyan;
+    font-size: 35px;
+    font-family:cursive;
+    text-align: center;
+    background-color:black;
+    width:50%;
+    text-shadow:white 3px 2px 2px;
+}
+body{
+	background-image:url(condition.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+button{
+	padding: 10px;
+	font-size: 16px;
+	background-color:black;
+	border-color:#00FF00;
+	border-width: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	width:150px;
+	height: 90px;
+	color:white;
+    
+}
+button:hover{
+	background-color: red;
+	box-shadow: 4px 7px 15px #FFFF00;
+	transform: scale(1.5);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+ </style>
+ <body>
+ 	<div class="sidebar">
+        <div class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+            <ul>
+              <li class="home"><a href="index.html">Home</a></li>
+                <li class="intro-javascript"><a href="intro.html">Introduction</a></li>
+                <li class="format"><a href="codes.html">Codes</a></li>
+                <li class="format"><a href="Text.html">Text Formating</a></li>
+                <li class="pop-up"><a href="Message pop-up.html">Pop-up Msg.</a></li>
+                <li class="condition"><a href="condition.html">Cond.STMT</a></li>
+                <li class="arithmetic"><a href="arithmitic.html">Arithmetic</a></li>
+                <li class="constant"><a href="constant.html">Constant</a></li>
+                 <li class="array"><a href="multidimensional.html">Array</a></li>
+                 <li class="about"><a href="about.html">About Creator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="condition"> 
+        <h1>Conditional Statement</h1>
+        <div class="Condition">
+      <h2>In computer science, conditionals are programming language commands for handling decisions. Specifically, conditionals perform different computations or actions depending on whether a programmer-defined Boolean condition evaluates to true or false. <center><br><h3>Click the button below to view the example!</h3></br></center></h2>
+      <br></br>
+      
+<div class="center">
+        <button onclick="sample_condition()">Click Here</button>
+   </div>
+  <script>
+
+  function sample_condition(){
+ 	let G = prompt("Enter your Gender:");
+
+if (G.toLowerCase() == "male"){
+	alert("Your gender is Male");
+
+	let Age =+prompt("Enter your Age:");
+	if(Age >= 21){
+		alert("You are in a Legal Age");
+	}
+	else if(Age < 21){
+		alert("You are in a Minor Age");
+	}
+}
+else if(G.toLowerCase()=="female"){
+	alert("Your gender is Female");
+
+	let Age =+prompt("Enter your Age:");
+	if(Age >= 18){
+		alert("You are in a Legal Age");
+	}
+	else if(Age < 18){
+		alert("You are in a Minor Age");
+	}
+}
+else if(G.toLowerCase() =="lesbian"||"gay"||"bisexual"||"transgender"){
+	alert("Your a member of the LGBT community");
+    }
+else{
+	alert("Input invalid");
+}
+}	
+ </script>
+ </body>
+ <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
